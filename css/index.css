@@ -1,0 +1,178 @@
+@import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css");
+
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("../assets//font/NetflixSansRegular.ttf");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/font/BebasNeue-Regular.ttf");
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px 28px;
+  background-color: var(--dark-black);
+  color: var(--white);
+  font-family: var(--font-text);
+}
+
+button{
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p::first-letter{
+    text-transform: uppercase;
+}
+
+h1{
+    font-weight: 100;
+}
+
+:root {
+  --light-green: #3ce684;
+  --soft-green: #aeef8b;
+  --white: #e0e0e0;
+  --soft-white: #f2f5de;
+  --dark-black: #222;
+  --config: #333;
+
+  --font-text: "Netflix Sans";
+  --font-logo: "Bebas Neue";
+}
+
+.light{
+  --white: #222;
+  --soft-white: #333;
+  --dark-black: #fafafa;
+  --config: #f2f5de;
+  --soft-green: #affa87;
+}
+
+
+/* menu */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+  color: var(--light-green);
+  font-family: var(--font-logo);
+  font-size: 2.7em;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+
+.menu-list > li {
+  position: relative;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.menu-list > li:not(:last-child) {
+  padding-bottom: 1px;
+  border-bottom: 2px solid var(--dark-black);
+}
+
+.menu-list > li:not(:last-child):hover{
+  border-color: var(--light-green);
+}
+
+.menu-list > li:last-child > i:hover, .selected {
+  color: var(--light-green);
+}
+
+.menu-list > li i {
+  font-size: 1.7em;
+}
+
+/* menu configurações */
+.config-menu {
+  display: none;
+  flex-direction: column;
+  row-gap: 14px;
+  position: absolute;
+  margin-top: 2px;
+  right: 0px;
+  background-color: var(--config);
+  border-radius: 4px;
+  padding: 20px;
+  cursor: default;
+}
+
+.config-menu.open{
+  display: flex;
+}
+
+.user {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.user > div h2 {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.user > div h3 {
+  font-size: 0.95em;
+  font-weight: 100;
+  text-transform: none;
+}
+
+.user img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.config-menu hr {
+  border: 1px solid var(--soft-green);
+}
+
+.user-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-theme i {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: var(--light-green);
+  transition: all .2s ease;
+}
+
+.light .user-theme i{
+  color: #ccc;
+}
