@@ -16,22 +16,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: background-color .2s ease, border-color .2s ease;
+  transition: background-color .1s ease, border-color .1s ease;
+  color: var(--white);
+}
+
+*::-webkit-scrollbar{
+ width: 4px;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: var(--dark-black);
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: var(--soft-green);
+  border-radius: 32px;
 }
 
 body {
-  display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px 28px;
   background-color: var(--dark-black);
-  color: var(--white);
   font-family: var(--font-text);
+  font-size: clamp(0.9em, 0.95em + 1vw, 1.2em);
+}
+
+body.flex{
+  justify-content: flex-start;
 }
 
 button{
   outline: none;
   border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+select{
+  all: unset;
+}
+
+a{
+  text-decoration: none;
 }
 
 ul {
@@ -48,131 +81,79 @@ h1{
 
 :root {
   --light-green: #3ce684;
+  --medium-green: #2cd774;
   --soft-green: #aeef8b;
+  --font-text: "Netflix Sans";
+  --font-logo: "Bebas Neue";
   --white: #e0e0e0;
   --soft-white: #f2f5de;
   --dark-black: #222;
   --config: #333;
-
-  --font-text: "Netflix Sans";
-  --font-logo: "Bebas Neue";
 }
 
 .light{
-  --white: #222;
-  --soft-white: #333;
-  --dark-black: #fafafa;
-  --config: #f2f5de;
-  --soft-green: #affa87;
+  --white: #444;
+  --soft-white: #303030;
+  --dark-black: #f0f0f0;
+  --config: #f3f3f3;
+  --soft-green: #9ade76;
 }
 
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* menu */
-header {
-  display: flex;
-  align-items: center;
+header.flex{
   justify-content: space-between;
 }
 
-header > h1 {
-  text-transform: uppercase;
-  font-weight: 100;
-  color: var(--light-green);
-  font-family: var(--font-logo);
+header{
+  width: 100%;
+}
+
+.logo{
   font-size: 2.7em;
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+  color: var(--light-green);
 }
 
-.menu-list {
-  display: flex;
-  align-items: center;
-  column-gap: 32px;
+.menu-list{
+  column-gap: 24px;
 }
 
-.menu-list > li {
-  position: relative;
+.menu-list > li{
   text-transform: capitalize;
-  cursor: pointer;
-  transition: all 0.1s ease;
-}
-
-.menu-list > li:not(:last-child) {
-  padding-bottom: 1px;
-  border-bottom: 2px solid var(--dark-black);
+  border-bottom: 2px solid;
+  border-color: transparent;
 }
 
 .menu-list > li:not(:last-child):hover{
   border-color: var(--light-green);
 }
 
-.menu-list > li:last-child > i:hover, .selected {
-  color: var(--light-green);
-}
-
-.menu-list > li i {
-  font-size: 1.7em;
-}
-
-/* menu configurações */
-.config-menu {
-  display: none;
-  flex-direction: column;
-  row-gap: 14px;
-  position: absolute;
-  margin-top: 2px;
-  right: 0px;
-  background-color: var(--config);
-  border-radius: 4px;
-  padding: 20px;
-  cursor: default;
-}
-
-.config-menu.open{
-  display: flex;
-}
-
-.user {
-  display: flex;
-  column-gap: 16px;
-  align-items: center;
-}
-
-.user > div h2 {
-  font-size: 1.2em;
-  font-weight: 100;
-}
-
-.user > div h3 {
-  font-size: 0.95em;
-  font-weight: 100;
-  text-transform: none;
-}
-
-.user img {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 1;
-  border-radius: 50%;
-}
-
-.config-menu hr {
+.menu-list hr{
   border: 1px solid var(--soft-green);
+  height: 20px;
 }
 
-.user-theme {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* user */
+.user-list{
+  font-size: 0.8em;
+  column-gap: 14px;
 }
 
-.user-theme i {
-  font-size: 1.3em;
-  cursor: pointer;
-  color: var(--light-green);
-  transition: all .2s ease;
+.user-list img{
+  object-fit: cover;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--soft-green);
 }
 
-.light .user-theme i{
-  color: #ccc;
+.user-list i{
+  font-size: 1.4em;
 }

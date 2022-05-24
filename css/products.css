@@ -1,0 +1,155 @@
+:root {
+  --dark-gray: #191919;
+  --text-product: #aaa;
+  --image: #243029;
+}
+
+.light {
+  --dark-gray: white;
+  --text-product: #888;
+  --image: rgba(174, 239, 139, 0.587);
+}
+
+body{
+  row-gap: 8px;
+}
+
+main {
+  flex-direction: column;
+  height: calc(100vh - 112px);
+  row-gap: 12px;
+}
+
+main,
+main > section {
+  width: 100%;
+}
+
+.products-header.flex {
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.products-header > div.flex {
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.products-header > div h1 {
+  font-family: var(--font-logo);
+  font-size: 2em;
+  color: var(--soft-white);
+}
+
+.products-header > div select {
+  width: 130px;
+  padding: 8px;
+  padding-right: 40px;
+  border-radius: 4px;
+  background-color: var(--dark-gray) !important;
+  font-size: 0.8em;
+  background: url("../assets/chevron-down.svg") no-repeat 150px;
+  background-size: 20px;
+}
+
+.products-header > form {
+  column-gap: 12px;
+}
+
+.products-header > form input {
+  min-width: 300px;
+  padding: 10px 16px;
+  border-radius: 32px;
+  background-color: var(--dark-gray);
+}
+
+.products-header > form button {
+  background-color: var(--medium-green);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 0.9em;
+}
+
+.products-header > form button i{
+  color: white;
+}
+
+.products {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.products > ul.flex {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: auto;
+  max-height: 420px;
+}
+
+.product {
+  flex-direction: column;
+  row-gap: 12px;
+  width: 300px;
+  padding: 16px 12px;
+  background-color: var(--dark-gray);
+  border-radius: 8px;
+}
+
+.product.flex,
+.product > div.flex {
+  align-items: flex-start;
+}
+
+.product > div {
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+  align-self: center;
+  background-color: var(--image);
+}
+
+.product h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--soft-white);
+}
+
+.product p {
+  color: var(--text-product);
+  font-size: 0.75em;
+}
+
+.product span {
+  font-size: 2.2em;
+  color: var(--medium-green);
+  font-family: var(--font-logo);
+}
+
+.product-text.flex {
+  width: 100%;
+  flex-direction: row;
+  align-items: center !important;
+  justify-content: space-between;
+}
+
+.product-text button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--medium-green);
+  font-size: 1em;
+}
+
+.product-text button i{
+    color: white;
+}

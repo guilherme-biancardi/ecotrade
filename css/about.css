@@ -1,0 +1,154 @@
+:root{
+    --founder: #1d1d1d;
+    --text-founder: #ccc;
+    --selected: #75fcad;
+    --values: #2f2f2f;
+}
+
+.light{
+    --founder: white;
+    --text-founder: #777;
+    --values: white;
+}
+
+body > img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+}
+
+main{
+  width: 100%;
+  height: calc(100vh - 103px);
+  z-index: 1;
+}
+
+main > section{
+  width: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  color: var(--soft-white);
+  font-family: var(--font-logo);
+}
+
+.founders {
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.founder {
+  padding: 28px;
+  column-gap: 28px;
+  max-width: 620px;
+  background-color: var(--founder);
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.founder > img {
+  width: 170px;
+  height: 170px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.founder-text.flex {
+  align-items: flex-start;
+}
+
+.founder-text {
+  width: 100%;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.founder-text :is(h2, h3) {
+  font-weight: 100;
+  font-size: 1.8em;
+  font-family: var(--font-logo);
+  color: var(--light-green);
+}
+
+.founder-text h3 {
+  margin-top: 4px;
+  font-size: 1.4em;
+  color: var(--soft-white);
+}
+
+.founder-text hr {
+  width: 100%;
+  border-color: var(--soft-green);
+}
+
+.founder-text p {
+  font-size: 0.8em;
+  color: var(--text-founder);
+}
+
+.slide {
+  column-gap: 12px;
+  margin-top: 8px;
+}
+
+.slide li.selected{
+    background-color: var(--selected);
+}
+
+.slide li {
+  width: 16px;
+  height: 16px;
+  background-color: var(--founder);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.values{
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.values-list{
+  width: 100%;
+  column-gap: 32px;
+}
+
+.value{
+  border-radius: 8px;
+  padding: 20px 24px;
+  background-color: var(--values);
+  flex-direction: column;
+  row-gap: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.value.flex{
+  align-items: flex-start;
+}
+
+.value > i{
+  width: 45px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid var(--light-green);
+  color: var(--light-green);
+  font-size: 1.1em;
+}
+
+.value h2{
+  color: var(--medium-green);
+  font-weight: 100;
+  font-family: var(--font-logo);
+  font-size: 2em;
+}
+
+.value > p{
+  max-width: 350px;
+  font-size: 0.95em;
+}

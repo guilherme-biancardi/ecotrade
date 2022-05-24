@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Vaso Cachepot de Plantas",
+    "description": "preto e branco - 34 unidades",
+    "price": 25.50,
+    "image": "../assets/products/cachepot.png"
+  },
+  {
+    "name": "Porta Retrato em Madeira",
+    "description": "porta retrato com 2 fotos - 32cm x 64cm",
+    "price": 32,
+    "image": "../assets/products/porta-retrato.webp"
+  },
+  {
+    "name": "Vaso Cachepot de Plantas",
+    "description": "preto e branco - 34 unidades",
+    "price": 25.50,
+    "image": "../assets/products/cachepot.png"
+  },
+  {
+    "name": "Porta Retrato em Madeira",
+    "description": "porta retrato com 2 fotos - 32cm x 64cm",
+    "price": 32,
+    "image": "../assets/products/porta-retrato.webp"
+  }
+]

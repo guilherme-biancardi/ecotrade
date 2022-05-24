@@ -1,14 +1,15 @@
-const configMenu = document.querySelector('.config-menu'),
-    btnConfig = document.querySelector('#btn-config')
+import {
+    button,
+    setTheme,
+    getTheme
+} from './modules/lightMode.js'
 
-btnConfig.addEventListener('click', () => {
-    btnConfig.classList.toggle('selected')
-    configMenu.classList.toggle('open')
-})
+import {createFounders} from './modules/founders.js'
+import { createProducts } from './modules/products.js'
 
-const btnDark = document.querySelector('#btn-dark')
+if(getTheme()) document.querySelector('html').classList.add('light')
+button.addEventListener('click', setTheme)
 
-btnDark.addEventListener('click', () => {
-    btnDark.classList.toggle('mdi-toggle-switch-off')
-    document.body.classList.toggle('light')
-})
+if(document.querySelector('.slide')) createFounders()
+
+if(document.querySelector('#product-list')) createProducts()

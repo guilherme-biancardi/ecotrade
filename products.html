@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Nossa empresa usa seu material doado para confeccionar produtos e oferecer descontos, proporcionando sustentabilidade e economia">
     <title>Ecotrade</title>
     <link rel="prelaod" href="css/index.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/products.css">
     <script src="js/index.js" async type="module"></script>
 </head>
 
@@ -35,17 +32,21 @@
         </nav>
     </header>
     <main class="flex">
-        <section class="main-text flex">
-            <h1>na sua compra, <br> quem ganha é o <span>planeta</span></h1>
-            <p>Nossa empresa usa seu material doado <br>
-                para confeccionar produtos e oferecer descontos, proporcionando sustentabilidade e economia.</p>
-            <button class="btn-start flex">
-                <p>começar agora</p>
-                <i class="mdi mdi-arrow-right-thick"></i>
-            </button>
+        <section class="products-header flex">
+            <div class="flex">
+                <h1>decoração</h1>
+                <select>
+                    <option value="">Selecionar Tipo:</option>
+                </select>
+            </div>
+            <form class="flex">
+                <input type="text" placeholder="Pesquise por um produto">
+                <button><i class="mdi mdi-magnify"></i></button>
+            </form>
         </section>
-        <img src="assets/undraw_friendship_mni7.svg" alt="dois amigos conversando a sombra de uma árvore" width="1142"
-            height="781">
+        <section class="products flex">
+            <ul class="flex" id="product-list"></ul>
+        </section>
     </main>
 </body>
 
